@@ -1,0 +1,1252 @@
+/* Logo */
+.logo {
+  height: 50px;
+}
+
+/* Dropdown hidden by default */
+#dropdownPanel {
+  max-height: 0;
+  overflow: hidden;
+  background: #f8f9fa;
+  transition: max-height 0.4s ease;
+}
+#dropdownPanel.open {
+  max-height: 3800px;
+}
+#dropdownPanel ul {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+#dropdownPanel li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Carousel indicators */
+.carousel-indicators {
+  position: static;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.carousel-indicators li {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #000;
+}
+.carousel-indicators li.active {
+  color: #007bff;
+}
+
+.carousel-caption-box {
+  background: rgba(59, 43, 43, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+}
+.carousel-caption-box h5 {
+  font-size: 1.8rem;
+  margin-bottom: 660px;
+}
+.carousel-caption-box p {
+  font-size: 1.2rem;
+}
+/* Ensure carousel items are positioned for absolute centering */
+#folio3Carousel .carousel-item {
+  position: relative;
+}
+.slider1-text {
+  width: 2000px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+
+/* Primary selector(s) to center slide-1 text (works whether you used a wrapper class or not)
+   - Targets the active carousel item and common inner wrapper patterns */
+#folio3Carousel .carousel-item.active .slider1-text,
+#folio3Carousel .carousel-item.active .center-slide-text,
+#folio3Carousel .carousel-item.active > .d-flex > div,
+#folio3Carousel .carousel-item.active .carousel-caption,
+#folio3Carousel .carousel-item.active .carousel-caption-box {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  text-align: center !important;
+  width: 90% !important;
+  max-width: 1200px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;   /* remove any box/background */
+  box-shadow: none !important;
+  border: none !important;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+}
+
+#folio3Carousel .carousel-item.active .carousel-caption-box,
+#folio3Carousel .carousel-item.active .carousel-caption {
+  background: transparent !important;
+}
+
+
+#folio3Carousel .carousel-item.active h1,
+#folio3Carousel .carousel-item.active .slider1-text h1,
+#folio3Carousel .carousel-item.active .carousel-caption-box h1,
+#folio3Carousel .carousel-item.active > .d-flex > div h1 {
+  color: #800d0d !important;                    
+  font-size: clamp(28px, 5vw, 56px) !important;
+  line-height: 1.05 !important;
+  margin: 0 0 12px !important;
+  font-weight: 700 !important;
+}
+
+
+#folio3Carousel .carousel-item.active p,
+#folio3Carousel .carousel-item.active .slider1-text p,
+#folio3Carousel .carousel-item.active .carousel-caption-box p,
+#folio3Carousel .carousel-item.active > .d-flex > div p {
+  color: #175a05 !important;
+  font-size: clamp(16px, 2.2vw, 20px) !important;
+  margin: 0 !important;
+}
+
+/* Override Bootstrap's .carousel-caption bottom placement (if present) */
+#folio3Carousel .carousel-caption {
+  bottom: auto !important;
+  top: 80% !important;
+  transform: translateY(-50%) !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+
+@media (max-width: 768px) {
+  #folio3Carousel .carousel-item.active h1 { font-size: clamp(20px, 8.5vw, 36px) !important; }
+  #folio3Carousel .carousel-item.active p  { font-size: clamp(14px, 4vw, 18px) !important; }
+  #folio3Carousel .carousel-item.active > .d-flex > div,
+  #folio3Carousel .carousel-item.active .slider1-text {
+    width: 95% !important;
+  }
+}
+
+
+#folio3Carousel .carousel-item.active * {
+  color: inherit !important;
+}
+/* ===== Center Slider 1 Text ===== */
+#folio3Carousel .carousel-item:first-child .carousel-caption {
+  position: l;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align:  end;  /* align text to the right */
+  color: #000;              /* black text */
+  background: transparent;  /* no box */
+  width: 100%;
+}
+
+#folio3Carousel .carousel-item:first-child h1,
+#folio3Carousel .carousel-item:first-child p {
+  color: #000; /* enforce black */
+}
+
+/* ===== Custom Indicators ===== */
+.carousel-indicators {
+  position: static;
+  display: flex;
+  justify-content: center;
+  gap: 10px;  
+  margin-top: 20px;
+}
+
+.carousel-indicators li {
+  list-style: none;
+  text-align: left end;
+  font-size: 1.1rem;
+  color: #000; 
+  cursor: pointer;
+}
+
+.carousel-indicators li::before {
+  content: "● ";
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+
+.carousel-indicators .active {
+  color: #007bff; 
+}
+
+
+
+
+.scroll-combined {
+  padding: 30px;
+  background: #f9f9f9;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.scroll-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.image-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 24px; /* space between rows */
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: scroll-left 20s linear infinite;
+}
+
+.marquee-track img {
+  height: 80px;
+  margin: 0 25px;
+  object-fit: contain;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+
+.partners-section, .awards-section {
+  margin-bottom: 80px; /* spacing between rows */
+}
+
+.awards-section > h2,
+.partners-section > h2 { 
+  margin-bottom: 50px; /* spacing between rows */
+ font-size: clamp(20px, 3.6vw, 36px);
+  text-align: center;
+  margin: 28px 16px;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  color: #111;
+}
+;;;
+.image-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+}
+
+.marquee-track img {
+  height: 80px;
+  margin:  660px;
+}
+
+/* Partners move left → right */
+.partners-section .marquee-track {
+  animation: moveRight 30s linear infinite;
+}
+
+/* Awards move right → left */
+.awards-section .marquee-track {
+  animation: moveLeft 30s linear infinite;
+}
+
+@keyframes moveRight {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes moveLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.image-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 50px; /* space between rows */
+}
+
+.marquee-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marqueeLeft 30s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes marqueeRight {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+.partners-section h2,
+.awards-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  text-align: left; /* heading on left */
+}
+.services-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 150px;
+  margin: 0px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Left text */
+.services-left {
+  flex: 1;
+}
+
+.services-left h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.services-left h2 span {
+  color: #642f2f;
+}
+
+.services-left p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Reset Elementor spacing for this widget */
+.elementor-element .elementor-widget-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.folio3-heading {
+  margin-left: 70px;       /* not too close to screen edge */
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+  color: #222;
+}
+
+/* Slider container */
+#newFolio3Carousel {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;       /* wider for Elementor sections */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Images */
+#newFolio3Carousel .carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Indicators inside */
+#newFolio3Carousel .carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+#newFolio3Carousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+#newFolio3Carousel .carousel-indicators .active {
+  background-color: #007bff;
+}
+
+
+/* ===== Timeline Container ===== */
+.services-timeline {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+/* ===== Vertical Line ===== */
+.services-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;                    /* Line in the center */
+  transform: translateX(-50%);
+  width: 3px;
+  background: #ccc;
+}
+
+/* ===== List Reset ===== */
+.services-timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===== Each Item ===== */
+.services-timeline li {
+  position: relative;
+  margin: 40px 0;                /* spacing between items */
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* ===== Bullet ===== */
+.services-timeline li .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;                     /* perfectly on the line */
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0073e6;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #0073e6;
+}
+
+/* ===== Text Label ===== */
+.services-timeline li .label {
+  display: inline-block;
+  margin-left: 80px;             /* space from bullet */
+  text-align: left;
+}
+
+
+/* Base layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+}
+
+.services-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Left content */
+.services-left {
+  width: 45%;
+}
+
+.services-left h1 {
+  margin-bottom: 70px;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.services-left h1 span {
+  display: block;
+  font-weight: 600;
+}
+
+
+/* General Layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Main Container */
+.services-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Content */
+.services-left {
+  width: 45%;
+}
+
+.services-left h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.services-left h1 span {
+  display: block;
+  font-weight: 400;
+  color: #000000;
+}
+
+.services-left p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Timeline Right Side */
+.services-timeline { text-align: right;  /* align text to the right */
+  width: 45%;
+  position: relative;
+  padding: 20px 0;
+}
+
+
+/* Base layout */
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Slide container with background */
+.slide-container {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  background: url("premium_photo-1676657954811-9409c4830467.avif") repeat center/cover; 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 80px;
+}
+
+/* Row of three boxes */
+.headings {
+  display: flex;
+  justify-content: space-between;
+  width: 400%;
+  gap: 90px;
+height: 800px;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+
+/* Subheading text */
+.heading-box {
+  margin-bottom: 10px;
+}
+
+/* Button */
+.elementor-button {
+  display: inline-block;
+  line-height: 1;
+  background-color: #69727d;
+  font-size: 15px;
+  padding: 12px 55px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  transition: all .3s;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.elementor-button:hover {
+  background-color: #50575f;
+}
+.customer-section {
+  display: flex;
+  justify-content: space-between; /* pushes h1 left and p right */
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.customer-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.customer-text {
+  font-size: 16px;
+  margin: 0;
+  text-align: right; /* keeps text aligned to the right */
+  line-height: 1.5;
+}
+
+
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #111;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    /* ===== Services Section ===== */
+    .services-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    /* Left content */
+    .services-left {
+      width: 45%;
+    }
+
+    .services-left h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .services-left h1 span {
+      display: block;
+      font-weight: 600;
+      color: #0073e6;
+    }
+
+    .services-left p {
+      margin-bottom: 15px;
+      font-size: 16px;
+      max-width: 700px;
+      color: #444;
+    }
+
+ /* ===== Timeline ===== */
+.services-timeline {
+  width: 45%;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Vertical line */
+/* Button */
+.elementor-button {
+  display: inline-block;
+  line-height: 1;
+  background-color: #69727d;
+  font-size: 15px;
+  padding: 12px 55px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  transition: all .3s;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+/* Timeline list */
+.services-timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1000px; /* ensures equal spacing */
+}
+
+/* Each item */
+.services-timeline li {
+  position: relative;
+  display: flex;
+  align-items: last baseline;
+  font-size: 18px;
+  color: #111;
+  cursor: pointer;
+}
+
+/* Bullet (dot) */
+.services-timeline .dot {
+  width: 16px;       /* small circle */
+  height: 16px;
+  border-radius: 50%;
+  background: #0073e6;
+  position: absolute;
+  left: 10000px;        /* exactly on line */
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: 0.3s;
+  background: #0073e6; 
+}
+
+
+/* Label */
+.services-timeline .label {
+  margin-left: 10px; /* distance from line */
+  text-align: left;  /* align text to the left */
+  color: #5a3636;
+  white-space: nowrap;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+/* Hover effect */
+.services-timeline li:hover .dot {
+  background: rgb(111, 44, 44);
+}
+.services-timeline li:hover .label {
+  font-weight: bold;
+  color: #0073e6;
+  text-decoration: underline;
+}
+
+/* Active (clicked) */
+.services-timeline li.active .dot {
+  background: rgb(121, 39, 39);
+}
+.services-timeline li.active .label {
+  font-weight: bold;
+  color: red;
+  text-decoration: underline;
+}
+
+
+.heading {
+  text-align: right;   /* Aligns the heading to the left */
+  direction: ltr;     /* Ensures text flows left-to-right */
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: black;
+  padding: 10px;
+}
+
+
+/* Brand heading */
+.brand {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: left; /* Start from left */
+  direction: ltr;   /* Left-to-right text flow */
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;        /* Horizontal layout */
+  list-style: none;     /* Remove bullets */
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;      /* Wrap on small screens */
+}
+
+/* Individual links */
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;    /* Space between links */
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: orange;        /* Hover effect */
+}
+
+/* Responsive: stack links below brand on small screens */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    margin-top: 00px;
+  }
+  .nav-links li a {
+    margin-left: 0;
+    margin-bottom: 448px;
+  }
+}
+.heading-wrapper:hover{
+  background-color: #50575f
+  ;
+  
+}
+/* Make navbar items always in a row */
+.navbar-nav {
+  display: flex;        /* Use flexbox */
+  flex-direction: row;  /* Horizontal layout */
+  gap: 70px;    
+}
+
+/* Optional: adjust link appearance */
+.navbar-nav .nav-link {
+  color: #B5AEA3;         /* Link color */
+  font-weight: 900;     /* Slightly bold */
+  transition: color 0.4s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;       /* Hover color */
+}
+
+
+/* Carousel indicators */
+.carousel-indicators {
+  position: static; /* moves them below carousel */
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.carousel-indicators button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #555;
+  border: none;
+}
+.carousel-indicators .active {
+  background-color: #ffc107;
+}
+
+/* Slide content tweaks */
+.carousel-item h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.carousel-item p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/* style.css - Portfolio layout + carousel item styling */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+.nav-link.active {
+  color: #ffc107 !important;
+}
+
+/* Sections */
+.portfolio-section {
+  display: none;
+  padding: 28px 0;
+  max-width: 1100px;
+  margin: 0 auto 24px;
+}
+.portfolio-section.active {
+  display: block;
+  animation: fadeIn .45s ease-in-out;
+}
+
+/* Generic portfolio item (image left, text right) */
+.portfolio-item {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* images */
+.portfolio-item img,
+.carousel-inner .carousel-item img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* content text */
+.portfolio-item h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #222;
+}
+.portfolio-item p {
+  margin: 0 0 12px;
+  color: #444;
+  line-height: 1.55;
+}
+.portfolio-item a {
+  display:inline-block;
+  text-decoration:none;
+  padding:8px 14px;
+  background:#343a40;
+  color:#fff;
+  border-radius:6px;
+  margin-top:10px;
+}
+.portfolio-item a:hover { background:#ffc107; color:#000; }
+
+/* ensure carousel items use same left-right layout */
+.carousel-inner .carousel-item {
+  padding: 12px 0;
+}
+.carousel-inner .carousel-item .portfolio-item {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* carousel control visuals */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0,0,0,0.55);
+  border-radius: 50%;
+  padding: 14px;
+}
+
+/* Marquee base */
+.image-marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Track holds logos; duplicate the set of logos in HTML for seamless loop */
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;             /* ~one-finger gap */
+  will-change: transform;
+  flex-wrap: nowrap;
+}
+
+/* Logo styling */
+.marquee-track img {
+  max-height: 80px;
+  width: auto;
+  margin: 0;
+  padding: 2px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+
+/* Direction helpers - apply .dir-left or .dir-right to marquee-track */
+.marquee-track.dir-left {
+  animation: scroll-left var(--marquee-speed, 12s) linear infinite;
+}
+.marquee-track.dir-right {
+  animation: scroll-right var(--marquee-speed, 12s) linear infinite;
+}
+
+/* If you want different speeds per row: add data-speed="8s" on track and set via inline style */
+.marquee-track[data-speed] {
+  animation-duration: attr(data-speed); /* fallback; not all browsers support attr() here */
+}
+
+/* Keyframes: translate by -50% (works if you duplicate the content in HTML) */
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scroll-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Optional: pause on hover so user can read logos */
+.image-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Accessibility / reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none !important; }
+}
+
+/* Responsive tweaks (smaller logos & slightly faster on small screens) */
+@media (max-width: 520px) {
+  .marquee-track img { max-height: 56px; }
+  .marquee-track.dir-left,
+  .marquee-track.dir-right { animation-duration: 9s; }
+}
+
+
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+    }
+
+    .milestones-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    /* Left content (heading + paragraph + button) */
+    .milestones-left {
+      margin-bottom: 40px;
+    }
+
+    .milestones-left h4 {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .milestones-left h2 {
+      font-size: 2.5rem;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .milestones-left p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .milestones-left .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #642f2f;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .milestones-left .btn:hover {
+      background-color: #805555;
+    }
+
+    /* Right milestones row */
+    .milestones-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .milestone {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .milestone-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #642f2f;
+      margin-bottom: 5px;
+    }
+
+    .milestone-label {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .milestones-right {
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+
+    label{
+      color: #5a0505;
+    }
+
+
+
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      gap: 50px;
+    }
+
+    /* Left contact info */
+    .contact-left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-left h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .contact-left p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .contact-left .info {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .contact-left .info span {
+      font-weight: bold;
+      display: inline-block;
+      width: 90px;
+    }
+
+    /* Right contact form */
+    .contact-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-right form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+      padding: 12px 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .contact-right textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-right button {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #e74c3c;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-right button:hover {
+      background-color: #c0392b;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #222;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    footer img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .contact-left,
+      .contact-right {
+        margin: 0 auto;
+      }
+
+      .contact-left .info span {
+        display: block;
+        width: auto;
+        margin-bottom: 5px;
+      }
+    }
+
+    footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    color: black;
+    margin-top: 40px;
+  }
+
+  .footer-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* space between the two images */
+    margin-bottom: 10px;
+  }
+
+  .footer-images img {
+    width: 100px;
+    height: auto;
+  }
